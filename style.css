@@ -1,3 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Acme&display=swap");
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Acme", sans-serif;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  align-items: center;
+  padding-left: 35px;
+  padding-right: 35px;
+  background-color: rgb(43, 43, 43);
+  color: wheat;
+}
+
+.brandname {
+  font-size: 25px;
+}
+
+.navlinks ul {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navlinks ul li {
+  display: block;
+  padding: 1rem;
+  border-style: solid;
+  border-color: white;
+  border-top: none;
+  border-bottom: none;
+  border-right: none;
+}
+
+.navlinks ul li a {
+  color: wheat;
+  text-decoration: none;
+}
+
+.navlinks ul li a:hover {
+  position: relative;
+  bottom: 3px;
+  color: white;
+}
+
+.navlinks ul li a:active {
+  color: rgb(134, 106, 106);
+}
+
+.togglebtn {
+  position: absolute;
+  right: 1rem;
+  top: 0.7rem;
+  height: 40px;
+  width: 40px;
+  display: none;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+
+.togglebtn .bars {
+  height: 5px;
+  width: 100%;
+  border-radius: 5px;
+  background-color: wheat;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: start;
+    align-items: start;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: rgb(43, 43, 43);
+    color: wheat;
+  }
+
+  .brandname {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-size: 25px;
+    right: 0.1rem;
+  }
+
+  .navlinks {
+    display: none;
+  }
+
+  .navlinks ul {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .navlinks ul li {
+    margin-bottom: 1rem;
+  }
+
+  .togglebtn {
+    display: flex;
+  }
+
+  .navlinks.active {
+    display: block;
+  }
+}
+
 .input-wrap {
   display: flex;
   flex-direction: column;
