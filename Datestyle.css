@@ -9,8 +9,17 @@
 }
 
 .timer {
+  font-size: 17px;
   position: absolute;
-  right: 0.5rem;
+  background-color: black;
+  color: white;
+  right: 0rem;
   padding: 0;
   margin: 0;
+}
+
+@media (max-width: 768px) {
+  .timer {
+    font-size: 15px;
+  }
 }

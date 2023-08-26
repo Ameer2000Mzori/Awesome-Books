@@ -8,35 +8,39 @@
     <link rel="stylesheet" href="Datestyle.css" />
   </head>
   <body>
-    <nav class="navbar">
-      <div class="brandname">Awesome Books</div>
-      <a href="#" class="togglebtn">
-        <span class="bars"></span>
-        <span class="bars"></span>
-        <span class="bars"></span>
-      </a>
-      <div class="navlinks">
-        <ul>
-          <li><a href="#">List</a></li>
-          <li><a href="#">Add new</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </div>
-    </nav>
-    <section class="timer-wrap"></section>
-    <h1>awesome books</h1>
-    <section class="books-container"></section>
-    <section class="input-wrap">
-      <input
-        id="title-id"
-        class="title"
-        type="text"
-        value=""
-        placeholder="Title"
-      />
-      <input id="author-id" class="author" type="text" placeholder="Author" />
-      <button class="add-button">Add</button>
-    </section>
+    <div class="gray-backgroud">
+      <nav class="navbar">
+        <div class="brandname">Awesome Books</div>
+        <a href="#" class="togglebtn">
+          <span class="bars"></span>
+          <span class="bars"></span>
+          <span class="bars"></span>
+        </a>
+        <div class="navlinks">
+          <ul>
+            <li><a href="#">List</a></li>
+            <li><a href="#">Add new</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+      <section class="timer-wrap"></section>
+      <section class="header">
+        <h1 class="header-title">All awesome books</h1>
+        <section class="books-container"></section>
+      </section>
+      <section class="input-wrap">
+        <input
+          id="title-id"
+          class="title"
+          type="text"
+          value=""
+          placeholder="Title"
+        />
+        <input id="author-id" class="author" type="text" placeholder="Author" />
+        <button class="add-button">Add</button>
+      </section>
+    </div>
   </body>
   <script src="script.js"></script>
   <script src="Navbar.js"></script>

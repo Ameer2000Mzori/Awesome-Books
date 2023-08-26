@@ -29,10 +29,13 @@ function displayBooks() {
       const person = booksObject[key];
       const div = document.createElement("div");
       div.innerHTML = `
-        <p> title: ${person.firstName}</p>
-        <p> author: ${person.lastName}</p>
+      <div class='book-wrap'>
+      <div class='text-wrap'>
+        <p class='title-text'> ${person.firstName} </p>
+        <p class='author-text'> By : ${person.lastName}</p>
+        </div>
         <button class="remove">Remove</button>
-        <hr>
+        </div>
       `;
 
       // Add a click event listener to the "Remove" button
