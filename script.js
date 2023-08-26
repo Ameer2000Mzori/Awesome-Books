@@ -2,46 +2,37 @@
 const booksContainer = document.querySelector(".books-container");
 const addButton = document.querySelector(".add-button");
 
-// Initialize the booksObject
-let booksObject = {};
-
-// Function to load data from local storage
-function loadDataFromLocalStorage() {
-  const storedData = localStorage.getItem("booksData");
-  if (storedData) {
-    booksObject = JSON.parse(storedData);
-  }
-}
+// Initialize the booksObject from local storage or an empty object
+let booksObject = JSON.parse(localStorage.getItem("booksData")) || {};
 
 // Function to save data to local storage
 function saveDataToLocalStorage() {
   localStorage.setItem("booksData", JSON.stringify(booksObject));
 }
 
-// Function to display persons/books
+// Function to display books
 function displayBooks() {
   // Clear the booksContainer
   booksContainer.innerHTML = "";
 
-  // Iterate through the booksObject and display each person (book)
+  // Iterate through the booksObject and display each book
   for (const key in booksObject) {
     if (booksObject.hasOwnProperty(key)) {
-      const person = booksObject[key];
+      const book = booksObject[key];
       const div = document.createElement("div");
+      div.classList.add("book-wrap");
       div.innerHTML = `
-      <div class='book-wrap'>
-      <div class='text-wrap'>
-        <p class='title-text'> ${person.firstName} </p>
-        <p class='author-text'> By : ${person.lastName}</p>
+        <div class='text-wrap'>
+          <p class='title-text'>${book.title}</p>
+          <p class='author-text'>By: ${book.author}</p>
         </div>
         <button class="remove">Remove</button>
-        </div>
       `;
 
       // Add a click event listener to the "Remove" button
       const removeButton = div.querySelector(".remove");
       removeButton.addEventListener("click", () => {
-        removePerson(key);
+        removeBook(key);
       });
 
       booksContainer.appendChild(div);
@@ -52,38 +43,42 @@ function displayBooks() {
   saveDataToLocalStorage();
 }
 
-// Function to add a new person/book
-function addPerson(firstName, lastName) {
-  const newKey = `person${Object.keys(booksObject).length + 1}`;
-  const newPerson = {
-    firstName,
-    lastName,
-  };
-  booksObject[newKey] = newPerson;
+// Function to add a new book
+function addBook(title, author) {
+  // Validate input (both fields must be filled)
+  if (title && author) {
+    const newKey = `book${Object.keys(booksObject).length + 1}`;
+    const newBook = {
+      title,
+      author,
+    };
+    booksObject[newKey] = newBook;
+  }
 }
 
-// Function to remove a person/book
-function removePerson(key) {
-  // Remove the person/book from the booksObject
+// Function to remove a book
+function removeBook(key) {
+  // Remove the book from the booksObject
   delete booksObject[key];
-  // Clear and re-display the booksContainer with updated data
+  // Display the updated list of books
   displayBooks();
 }
-
-// Load data from local storage on page load
-loadDataFromLocalStorage();
 
 // Display initial data on page load
 displayBooks();
 
 // Add event listener for the "Add" button
 addButton.addEventListener("click", () => {
-  const firstName = document.getElementById("title-id").value;
-  const lastName = document.getElementById("author-id").value;
+  const titleInput = document.getElementById("title-id").value;
+  const authorInput = document.getElementById("author-id").value;
 
-  // Call the addPerson function to add a new person (book)
-  addPerson(firstName, lastName);
+  // Call the addBook function to add a new book
+  addBook(titleInput, authorInput);
 
-  // Clear and re-display the booksContainer with updated data
+  // Clear input fields
+  document.getElementById("title-id").value = "";
+  document.getElementById("author-id").value = "";
+
+  // Display the updated list of books
   displayBooks();
 });

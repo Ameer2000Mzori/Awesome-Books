@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>awesome books</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="addNewstyle.css" />
     <link rel="stylesheet" href="Datestyle.css" />
   </head>
   <body>
@@ -26,10 +26,21 @@
       </nav>
       <section class="timer-wrap"></section>
       <section class="header">
-        <h1 class="header-title">ALL AWESOME BOOKS</h1>
-        <section class="books-container"></section>
+        <h1 class="header-title">ADD A NEW BOOK</h1>
+      </section>
+      <section class="input-wrap">
+        <input
+          id="title-id"
+          class="title"
+          type="text"
+          value=""
+          placeholder="Title"
+        />
+        <input id="author-id" class="author" type="text" placeholder="Author" />
+        <button class="add-button">Add</button>
       </section>
     </div>
+    <section class="books-container"></section>
     <section class="footer">
       <h1>@2023 By Ameer Ameen</h1>
     </section>

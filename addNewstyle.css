@@ -133,6 +133,10 @@ body {
   }
 }
 
+.books-container {
+  display: none;
+}
+
 .header {
   display: flex;
   flex-direction: column;
@@ -148,103 +152,72 @@ body {
   color: rgb(255, 255, 255);
 }
 
-.books-container {
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-  width: 75%;
-  background-color: rgba(245, 222, 179, 0.541);
-}
-
-.book-wrap {
+.input-wrap {
   display: flex;
   text-align: center;
   align-items: center;
-  justify-content: space-between;
-  height: 15px;
-  padding: 5px;
-  margin: 5px;
+  justify-content: space-evenly;
+  flex-direction: column;
+  width: 100%;
 }
 
-.text-wrap {
-  display: flex;
-  border-color: rgb(0, 0, 0);
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-  background-color: rgba(255, 255, 255, 0.664);
-  position: relative;
-  text-align: start;
+.title {
+  text-align: center;
   align-items: center;
+  height: 35px;
+  width: 500px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.author {
+  text-align: center;
+  align-items: center;
+  height: 35px;
+  width: 500px;
+  margin-bottom: 1rem;
+}
+
+.add-button {
+  background-color: rgb(255, 255, 255);
   height: 30px;
-  margin-left: 0.2rem;
-}
-
-.title-text {
-  margin-right: 0.2rem;
-}
-
-.author-text {
-  margin-right: 0.2rem;
-}
-
-.remove {
-  color: white;
-  position: absolute;
-  right: 15%;
-  border-style: solid;
+  width: 250px;
   border-width: 1px;
-  background-color: rgb(148, 53, 53);
+  background-color: rgb(93, 186, 223);
   border-color: black;
   border-style: none;
-  height: 25px;
 }
 
-.remove:hover {
+.add-button:hover {
   background-color: white;
   color: black;
 }
 
-.remove:active {
+.add-button:active {
   color: rgb(0, 0, 0);
   background-color: gray;
 }
 
 @media (max-width: 768px) {
-  .books-container {
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    width: 99%;
-    background-color: rgba(245, 222, 179, 0.541);
+  .title {
+    text-align: center;
+    align-items: center;
+    height: 25px;
+    width: 300px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
   }
 
-  .title-text {
-    display: flex;
-    flex-wrap: wrap;
-    text-align: start;
-    align-items: start;
-    flex-direction: row;
-    font-size: 14px;
-    overflow-x: scroll;
-    max-width: 10ch;
-    margin-right: 0.5rem;
+  .author {
+    text-align: center;
+    align-items: center;
+    height: 25px;
+    width: 300px;
+    margin-bottom: 1rem;
   }
 
-  .author-text {
-    display: flex;
-    flex-wrap: wrap;
-    text-align: start;
-    align-items: start;
-    flex-direction: row;
-    font-size: 14px;
-    overflow-x: scroll;
-    max-width: 18ch;
-    margin-right: 0.4rem;
-  }
-
-  .remove {
-    font-size: 12px;
-    right: 1.5rem;
+  .add-button {
+    height: 30px;
   }
 }
 
