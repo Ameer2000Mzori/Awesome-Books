@@ -9,8 +9,16 @@ body {
 
 .gray-backgroud {
   background-color: rgba(56, 47, 47, 0.63);
-  height: clamp(1200px, 2.5vw, 10000px);
+  height: clamp(905px, 2.5vw, 10000px);
   width: 100%;
+}
+
+@media (max-width: 768px) {
+  .gray-backgroud {
+    background-color: rgba(56, 47, 47, 0.63);
+    height: clamp(800px, 2.5vw, 10000px);
+    width: 100%;
+  }
 }
 
 .navbar {
@@ -240,6 +248,23 @@ body {
     font-size: 12px;
     right: 1.5rem;
   }
+}
+
+.footer {
+  display: block;
+  height: 50px;
+  border-style: dotted;
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
+  border-color: wheat;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  padding: 0;
+  background-color: rgb(43, 43, 43);
 }
 
 .input-wrap {
