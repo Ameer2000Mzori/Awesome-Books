@@ -16,9 +16,14 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 Awesome-Books <a name="about-project"></a>
+# 📖 About This Project <a name="about-project"></a>
 
 > Awesome-Books is a website crafted with HTML, CSS, and JavaScript. Leveraging event listeners to maintain code cleanliness and overcome potential errors, the project also utilizes local storage to persistently store data. Feel free to explore the live demo for an interactive experience.
+
+# Sample Of Website <a name="Sample-Of-Website"></a>
+
+![alt text](./sample/1.png)
+![alt text](./sample/2.png)
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -27,10 +32,11 @@
 <details>
   <summary>Client</summary>
   <ul>
-        <li><a href="https://en.wikipedia.org/wiki/HTML">Html</a></li>
-        <li><a href="https://en.wikipedia.org/wiki/CSS">Css</a></li>
-        <li><a href="https://nl.wikipedia.org/wiki/JavaScript">Javascript</a></li>
-    
+  <li><a href="https://en.wikipedia.org/wiki/HTML">Html</a></li>
+  <li><a href="https://en.wikipedia.org/wiki/CSS">Css</a></li>
+  <li><a href="https://en.wikipedia.org/wiki/JavaScript">Javascript</a></li>
+  <li><a href="https://stylelint.io/">Html/CSS Linters</a></li>
+
   </ul>
 </details>
 
@@ -85,8 +91,6 @@ If you like this project, don't hesitate to give it a star 😊.
 <!-- ACKNOWLEDGEMENTS -->
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
-
-I would like to thank Microverse team for the resources.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
