@@ -16,9 +16,9 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 My Portafolio <a name="about-project"></a>
+# 📖 Awesome-Books <a name="about-project"></a>
 
-> This is my website portfolio, made with HTML, CSS, and JavaScript. and it's a multi-page responsive website. it's a whole website made for desktop and mobile versions.
+> Awesome-Books is a website crafted with HTML, CSS, and JavaScript. Leveraging event listeners to maintain code cleanliness and overcome potential errors, the project also utilizes local storage to persistently store data. Feel free to explore the live demo for an interactive experience.
 
 ## 🛠 Built With <a name="built-with"></a>
 
